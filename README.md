@@ -1,5 +1,5 @@
 # Early Validation of Functional Requirements Through Code Synthesis
-## Nestor Catano (nxccics@rit.edu.co)
+## Néstor Cataño-Collazos (nxccics@rit.edu.co)
 ## Viktoria Koscinski (vk2635@rit.edu)
 ## Mehdi Mirakhorli (mxmvse@rit.edu).
 
