@@ -11,6 +11,6 @@ This repository describes our experiences in using formal methods for the early 
 
 **autonomous_vehicle_eclipse.zip** is the Eclipse project with the unit-tests for the autonomous vehicle. Your can import it as en Eclipse project from any Java-based Eclipse IDE.
 
-**comm_sys_US.rtf** is a .rtf document with the User Stories of the communication system.
+**comm_sys_US.rtf** is an .rtf document with the User Stories of the communication system.
 
-**comm_sys_EB.rtf** is a .rtf document with the "manual" Event-B modeling of the User Stories for the communication system.
+**comm_sys_EB.rtf** is an .rtf document with the "manual" Event-B modeling of the User Stories for the communication system.
