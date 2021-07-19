@@ -1,0 +1,132 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 BraveSansMono-Roman;}
+{\colortbl;\red255\green255\blue255;\red128\green0\blue0;\red192\green192\blue192;\red0\green0\blue255;
+\red128\green128\blue128;\red0\green128\blue0;}
+{\*\expandedcolortbl;;\csgenericrgb\c50196\c0\c0;\csgenericrgb\c75294\c75294\c75294;\csgenericrgb\c0\c0\c100000;
+\csgenericrgb\c50196\c50196\c50196;\csgenericrgb\c0\c50196\c0;}
+\margl1440\margr1440\vieww16200\viewh13200\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 event \cf0 create_chat_session \cf3 // US-01\cf0 \
+    \cf2 any \cf4 u1\cf0  \cf4 u2\cf0 \
+    \cf2 where\cf0 \
+      \cf5 @grd1\cf0  \cf4 u1\cf0 \uc0\u8712 \cf4 user\cf0  \uc0\u8743  \cf4 u2\cf0 \uc0\u8712 \cf4 user\cf0 \
+      \cf5 @grd2\cf0  \cf4 u1\cf0 \uc0\u8614 \cf4 u2\cf0  \uc0\u8713  \cf4 chat\cf0 \
+    \cf2 then\cf0 \
+      \cf5 @act1\cf0  \cf4 chat\cf0  \uc0\u8788  \cf4 chat\cf0  \uc0\u8746  \{\cf4 u1\cf0 \uc0\u8614 \cf4 u2\cf0 \}\
+      \cf5 @act2\cf0  \cf4 active\cf0 (\cf4 u1\cf0 ) \uc0\u8788  \cf4 u2\cf0 \
+  \cf2 end\cf0 \
+\
+  \cf2 event \cf0 select_chat \cf3 // US-02\cf0 \
+    \cf2 any \cf4 u1\cf0  \cf4 u2\cf0 \
+    \cf2 where\cf0 \
+      \cf5 @grd1\cf0  \cf4 u1\cf0 \uc0\u8712 \cf4 user\cf0  \uc0\u8743  \cf4 u2\cf0 \uc0\u8712 \cf4 user\cf0 \
+      \cf5 @grd2\cf0  \cf4 u1\cf0  \uc0\u8614  \cf4 u2\cf0  \uc0\u8712  \cf4 chat\cf0 \
+      \cf5 @grd3\cf0  \cf4 u1\cf0  \uc0\u8614  \cf4 u2\cf0  \uc0\u8713  \cf4 muted\cf0 \
+      \cf5 @grd4\cf0  \cf4 u1\cf0  \uc0\u8614  \cf4 u2\cf0  \uc0\u8713  \cf4 active\cf0 \
+    \cf2 then\cf0 \
+      \cf5 @act1\cf0  \cf4 active\cf0  \uc0\u8788  \cf4 active\cf0  \uc0\u57603  \{\cf4 u1\cf0 \uc0\u8614 \cf4 u2\cf0 \}\
+  \cf2 end\cf0 \
+\
+  \cf2 event \cf0 chatting \cf3 // US-03\cf0 \
+    \cf2 any \cf4 u1\cf0  \cf4 u2\cf0  \cf4 c\cf0 \
+    \cf2 where\cf0 \
+      \cf5 @grd1\cf0  \cf4 u1\cf0 \uc0\u8712 \cf4 user\cf0  \uc0\u8743  \cf4 u2\cf0 \uc0\u8712 \cf4 user\cf0 \
+      \cf5 @grd2\cf0  \cf4 u1\cf0 \uc0\u8614 \cf4 u2\cf0  \uc0\u8712  \cf4 active\cf0 \
+      \cf5 @grd3\cf0  \cf4 u1\cf0  \uc0\u8614  \cf4 u2\cf0  \uc0\u8713  \cf4 muted\cf0  \uc0\u8743  \cf4 u2\cf0 \uc0\u8614 \cf4 u1\cf0  \uc0\u8713  \cf4 muted\cf0 \
+      \cf5 @grd4\cf0  \cf4 c\cf0 \uc0\u8712 \cf6 CONTENT\cf0  \uc0\u8743  \cf4 c\cf0 \uc0\u8713 \cf4 content\cf0 \
+      \cf5 @grd5\cf0  \cf4 u1\cf0 \uc0\u8712  \cf2 dom(\cf4 chatcontent\cf0 )\
+    \cf2 then\cf0 \
+      \cf5 @act1\cf0  \cf4 content\cf0  \uc0\u8788  \cf4 content\cf0  \uc0\u8746  \{\cf4 c\cf0 \}\
+      \cf5 @act2\cf0  \cf4 chat\cf0  \uc0\u8788  \cf4 chat\cf0  \uc0\u8746  \{\cf4 u2\cf0 \uc0\u8614 \cf4 u1\cf0 \}\
+      \cf5 @act3\cf0  \cf4 chatcontent\cf0  \uc0\u8788  \cf4 chatcontent\cf0  \uc0\u57603  \{\cf4 u1\cf0 \uc0\u8614  \cf4 chatcontent\cf0 (\cf4 u1\cf0 ) \uc0\u8746  \{\cf4 c\cf0 \uc0\u8614 \{\cf4 u2\cf0 \}\}\}   \
+    \cf2 end\cf0 \
+\
+  \cf2 event \cf0 delete_content \cf3 // US-04\cf0 \
+    \cf2 any \cf4 u1\cf0  \cf4 u2\cf0  \cf4 c\cf0 \
+    \cf2 where\cf0 \
+      \cf5 @grd1\cf0  \cf4 u1\cf0 \uc0\u8712 \cf4 user\cf0  \uc0\u8743  \cf4 u2\cf0 \uc0\u8712 \cf4 user\cf0 \
+      \cf5 @grd2\cf0  \cf4 u1\cf0 \uc0\u8614 \cf4 u2\cf0  \uc0\u8712  \cf4 active\cf0 \
+      \cf5 @grd3\cf0  \cf4 u1\cf0 \uc0\u8712 \cf2 dom(\cf4 chatcontent\cf0 )\
+      \cf5 @grd4\cf0  \cf4 c\cf0 \uc0\u8712 \cf2 dom(\cf4 chatcontent\cf0 (\cf4 u1\cf0 ))\
+      \cf5 @grd5\cf0  \cf4 u2\cf0 \uc0\u8712 \cf4 chatcontent\cf0 (\cf4 u1\cf0 )(\cf4 c\cf0 )\
+    \cf2 then\cf0 \
+      \cf5 @act1\cf0  \cf4 chatcontent\cf0 (\cf4 u1\cf0 ) \uc0\u8788  \cf4 chatcontent\cf0 (\cf4 u1\cf0 ) \uc0\u57603  \{\cf4 c\cf0  \uc0\u8614  (\cf4 chatcontent\cf0 (\cf4 u1\cf0 )(\cf4 c\cf0 )\uc0\u8726 \{\cf4 u2\cf0 \})\} \
+  \cf2 end\cf0 \
+\
+  \cf2 event \cf0 remove_content \cf3 // US-04\cf0 \
+    \cf2 any \cf4 u1\cf0  \cf4 u2\cf0  \cf4 c\cf0 \
+    \cf2 where\cf0 \
+      \cf5 @grd1\cf0  \cf4 u1\cf0 \uc0\u8712 \cf4 user\cf0  \uc0\u8743  \cf4 u2\cf0 \uc0\u8712 \cf4 user\cf0 \
+      \cf5 @grd2\cf0  \cf4 u1\cf0 \uc0\u8614 \cf4 u2\cf0  \uc0\u8712  \cf4 active\cf0 \
+      \cf5 @grd3\cf0  \cf4 u1\cf0 \uc0\u8712 \cf2 dom(\cf4 chatcontent\cf0 )\
+      \cf5 @grd4\cf0  \cf4 c\cf0 \uc0\u8712 \cf2 dom(\cf4 chatcontent\cf0 (\cf4 u1\cf0 ))\
+      \cf5 @grd5\cf0  \cf4 u2\cf0 \uc0\u8712 \cf4 chatcontent\cf0 (\cf4 u1\cf0 )(\cf4 c\cf0 )\
+    \cf2 then\cf0 \
+      \cf5 @act1\cf0  \cf4 chatcontent\cf0 (\cf4 u1\cf0 ) \uc0\u8788   \{\cf4 c\cf0 \} \uc0\u10852  \cf4 chatcontent\cf0 (\cf4 u1\cf0 ) \
+  \cf2 end\cf0 \
+\
+  \cf2 event \cf0 delete_chat_session\
+  \cf2 end\cf0 \
+\
+  \cf2 event \cf0 mute_chat \cf3 // US-06\cf0 \
+    \cf2 any \cf4 u1\cf0  \cf4 u2\cf0 \
+    \cf2 where\cf0 \
+      \cf5 @grd1\cf0  \cf4 u1\cf0 \uc0\u8712 \cf4 user\cf0  \uc0\u8743  \cf4 u2\cf0 \uc0\u8712 \cf4 user\cf0 \
+      \cf5 @grd2\cf0  \cf4 u1\cf0  \uc0\u8614  \cf4 u2\cf0  \uc0\u8712  \cf4 chat\cf0 \
+      \cf5 @grd3\cf0  \cf4 u1\cf0  \uc0\u8614  \cf4 u2\cf0  \uc0\u8713  \cf4 muted\cf0 \
+    \cf2 then\cf0 \
+      \cf5 @act1\cf0  \cf4 muted\cf0  \uc0\u8788  \cf4 muted\cf0  \uc0\u8746  \{\cf4 u1\cf0 \uc0\u8614 \cf4 u2\cf0 \}\
+      \cf5 @act2\cf0  \cf4 active\cf0  \uc0\u8788  \cf4 active\cf0  \uc0\u8726  \{\cf4 u1\cf0 \uc0\u8614 \cf4 u2\cf0 \}\
+  \cf2 end\cf0 \
+\
+  \cf2 event \cf0 unmute_chat \cf3 // US-07\cf0 \
+    \cf2 any \cf4 u1\cf0  \cf4 u2\cf0 \
+    \cf2 where\cf0 \
+      \cf5 @grd1\cf0  \cf4 u1\cf0 \uc0\u8712 \cf4 user\cf0  \uc0\u8743  \cf4 u2\cf0 \uc0\u8712 \cf4 user\cf0 \
+      \cf5 @grd2\cf0  \cf4 u1\cf0  \uc0\u8614  \cf4 u2\cf0  \uc0\u8712  \cf4 chat\cf0 \
+      \cf5 @grd3\cf0  \cf4 u1\cf0  \uc0\u8614  \cf4 u2\cf0  \uc0\u8712  \cf4 muted\cf0 \
+    \cf2 then\cf0 \
+      \cf5 @act1\cf0  \cf4 muted\cf0  \uc0\u8788  \cf4 muted\cf0  \uc0\u8726  \{\cf4 u1\cf0 \uc0\u8614 \cf4 u2\cf0 \}\
+  \cf2 end\cf0 \
+\
+  \cf2 event \cf0 broadcast \cf3 // US-08\cf0 \
+    \cf2 any \cf4 u\cf0  \cf4 us\cf0  \cf4 c\cf0 \
+    \cf2 where\cf0 \
+      \cf5 @grd1\cf0  \cf4 u\cf0  \uc0\u8712  \cf4 user\cf0 \
+      \cf5 @grd2\cf0  \cf4 us\cf0  \uc0\u8838  \cf4 user\cf0 \
+      \cf5 @grd3\cf0  \cf4 muted\cf0 [\{\cf4 u\cf0 \}] \uc0\u8745  \cf4 us\cf0  = \uc0\u8709  \u8743  \cf4 muted\cf0 [\cf4 us\cf0 ] \uc0\u8745  \{\cf4 u\cf0 \} = \uc0\u8709 \
+      \cf5 @grd4\cf0  \cf4 c\cf0  \uc0\u8712  \cf4 content\cf0 \
+      \cf5 @grd5\cf0  \cf4 u\cf0  \uc0\u8712  \cf2 dom(\cf4 chatcontent\cf0 )\
+      \cf5 @grd6\cf0  \cf4 u\cf0  \uc0\u8713  \cf4 us\cf0 \
+    \cf2 then\cf0 \
+      \cf5 @act1\cf0  \cf4 chatcontent\cf0  \uc0\u8788  \cf4 chatcontent\cf0  \uc0\u57603  \{\cf4 u\cf0 \uc0\u8614 (\{\cf4 c\cf0 \}\'d7\{\cf4 us\cf0 \})\} \uc0\u57603  (\cf4 us\cf0 \'d7\{(\{\cf4 c\cf0 \}\'d7\{\{\cf4 u\cf0 \}\})\})\
+      \cf5 @act2\cf0  \cf4 content\cf0  \uc0\u8788  \cf4 content\cf0  \uc0\u8746  \{\cf4 c\cf0 \}\
+      \cf5 @act3\cf0  \cf4 chat\cf0  \uc0\u8788  \cf4 chat\cf0  \uc0\u8746  (\{\cf4 u\cf0 \}\'d7\cf4 us\cf0 ) \uc0\u8746  (\cf4 us\cf0 \'d7\{\cf4 u\cf0 \})\
+  \cf2 end\cf0 \
+\
+  \cf2 event \cf0 forward \cf3 // US-09\cf0 \
+    \cf2 any \cf4 u\cf0  \cf4 us\cf0  \cf4 c\cf0 \
+    \cf2 where\cf0 \
+      \cf5 @grd1\cf0  \cf4 u\cf0  \uc0\u8712  \cf4 user\cf0 \
+      \cf5 @grd2\cf0  \cf4 us\cf0  \uc0\u8838  \cf4 user\cf0 \
+      \cf5 @grd3\cf0  \cf4 muted\cf0 [\{\cf4 u\cf0 \}] \uc0\u8745  \cf4 us\cf0  = \uc0\u8709  \u8743  \cf4 muted\cf0 [\cf4 us\cf0 ] \uc0\u8745  \{\cf4 u\cf0 \} = \uc0\u8709 \
+      \cf5 @grd4\cf0  \cf4 c\cf0  \uc0\u8712  \cf4 content\cf0 \
+      \cf5 @grd5\cf0  \cf4 u\cf0  \uc0\u8712  \cf2 dom(\cf4 chatcontent\cf0 )\
+      \cf5 @grd6\cf0  \cf4 us\cf0  \uc0\u8838  \cf4 chat\cf0 [\{\cf4 u\cf0 \}]\
+    \cf2 then\cf0 \
+      \cf5 @act1\cf0  \cf4 chatcontent\cf0  \uc0\u8788  \cf4 chatcontent\cf0  \uc0\u57603  \{\cf4 u\cf0 \uc0\u8614 (\cf4 chatcontent\cf0 (\cf4 u\cf0 )\uc0\u8746 \{\cf4 c\cf0 \uc0\u8614 \cf4 us\cf0 \})\} \
+      \cf5 @act2\cf0  \cf4 content\cf0  \uc0\u8788  \cf4 content\cf0  \uc0\u8746  \{\cf4 c\cf0 \}\
+      \cf5 @act3\cf0  \cf4 chat\cf0  \uc0\u8788  \cf4 chat\cf0  \uc0\u8746  (\cf4 us\cf0 \'d7\{\cf4 u\cf0 \})\
+  \cf2 end\cf0 \
+\
+  \cf2 event \cf0 unselect_chat \cf3 // US-10\cf0 \
+    \cf2 any \cf4 u1\cf0  \cf4 u2\cf0 \
+    \cf2 where\cf0 \
+      \cf5 @grd1\cf0  \cf4 u1\cf0 \uc0\u8712 \cf4 user\cf0  \uc0\u8743  \cf4 u2\cf0 \uc0\u8712 \cf4 user\cf0 \
+      \cf5 @grd2\cf0  \cf4 u1\cf0  \uc0\u8614  \cf4 u2\cf0  \uc0\u8712  \cf4 chat\cf0 \
+      \cf5 @grd3\cf0  \cf4 u1\cf0  \uc0\u8614  \cf4 u2\cf0  \uc0\u8712  \cf4 active\cf0 \
+    \cf2 then\cf0 \
+      \cf5 @act1\cf0  \cf4 active\cf0  \uc0\u8788  \cf4 active\cf0  \uc0\u8726  \{\cf4 u1\cf0 \uc0\u8614 \cf4 u2\cf0 \}\
+  \cf2 end}
