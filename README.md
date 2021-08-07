@@ -15,4 +15,4 @@ This repository describes our experiences in using formal methods for the early 
 
 **comm_sys_EB.rtf** is an .rtf document with the "manual" Event-B modeling of the User Stories for the communication system.
 
-We have implemented a Natural Language Processiing (NLP) approach to convert User Stories into Event-B mdoels. The implemented tool is available from https://bitbucket.org/seprolab/code-synthesis/src/master/
+We have implemented a Natural Language Processiing (NLP) approach to convert User Stories into Event-B models. The implemented tool is available from https://bitbucket.org/seprolab/code-synthesis/src/master/
